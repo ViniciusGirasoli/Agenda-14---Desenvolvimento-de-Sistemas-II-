@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mini Padlet</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Collaborative Wall</h1>
-  <div id="note-form">
-    <textarea id="note-input" placeholder="Write your note here..."></textarea>
-    <button onclick="addNote()">Add Note</button>
+  <!-- Tela de boas-vindas -->
+  <div id="welcome-screen">
+    <h1>Welcome to the Padlet Wall!</h1>
+    <button onclick="enterPadlet()">Enter the Wall</button>
   </div>
-  <div id="board"></div>
+
+  <!-- Tela principal do padlet -->
+  <div id="padlet-screen" class="hidden">
+    <h2>My Collaborative Wall</h2>
+    <div id="note-form">
+      <textarea id="note-input" placeholder="Write your note..."></textarea>
+      <button onclick="addNote()">Add Note</button>
+    </div>
+    <div id="board"></div>
+  </div>
 
   <script src="script.js"></script>
 </body>
