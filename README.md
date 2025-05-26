@@ -1,0 +1,46 @@
+<h1 align="center">Olá! Eu sou [Seu Nome]</h1>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+</p>
+
+---
+
+## Sobre mim
+
+- Desenvolvedor Web
+- Apaixonado por tecnologia e inovação
+- Sempre aprendendo algo novo!
+
+---
+
+## Meus Projetos
+
+<table>
+  <tr>
+    <td>
+      <strong>Projeto 1</strong><br>
+      Uma breve descrição do projeto 1.<br>
+      <a href="https://github.com/seuusuario/projeto1">Ver repositório</a>
+    </td>
+    <td>
+      <strong>Projeto 2</strong><br>
+      Uma breve descrição do projeto 2.<br>
+      <a href="https://github.com/seuusuario/projeto2">Ver repositório</a>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Contato
+
+- Email: seuemail@exemplo.com  
+- LinkedIn: [linkedin.com/in/seu-usuario](https://linkedin.com/in/seu-usuario)
+
+---
+
+<p align="center">Feito com ♥ por [Seu Nome]</p>
