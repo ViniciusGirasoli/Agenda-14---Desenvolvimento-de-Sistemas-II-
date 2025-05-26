@@ -1,86 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Site</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Bem-vindo ao Meu Site</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
+<h1 align="center">Olá! Eu sou [Seu Nome]</h1>
 
-  <main>
-    <section class="destaque">
-      <h2>Destaque</h2>
-      <p>Este é um exemplo de layout visual simples e responsivo.</p>
-      <img src="imagens/exemplo.jpg" alt="Imagem de exemplo">
-    </section>
-  </main>
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub-100000?style=flat-square&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black"/>
+</p>
 
-  <footer>
-    <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+---
 
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
+## Sobre mim
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
+- Desenvolvedor Web
+- Apaixonado por tecnologia e inovação
+- Sempre aprendendo algo novo!
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
+---
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
+## Meus Projetos
 
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
+<table>
+  <tr>
+    <td>
+      <strong>Projeto 1</strong><br>
+      Uma breve descrição do projeto 1.<br>
+      <a href="https://github.com/seuusuario/projeto1">Ver repositório</a>
+    </td>
+    <td>
+      <strong>Projeto 2</strong><br>
+      Uma breve descrição do projeto 2.<br>
+      <a href="https://github.com/seuusuario/projeto2">Ver repositório</a>
+    </td>
+  </tr>
+</table>
 
-main {
-  padding: 20px;
-  text-align: center;
-}
+---
 
-.destaque img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 15px;
-}
+## Contato
 
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  margin-top: 20px;
-}
+- Email: seuemail@exemplo.com  
+- LinkedIn: [linkedin.com/in/seu-usuario](https://linkedin.com/in/seu-usuario)
+
+---
+
+<p align="center">Feito com ♥ por [Seu Nome]</p>
