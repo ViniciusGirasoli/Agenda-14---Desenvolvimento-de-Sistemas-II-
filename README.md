@@ -42,4 +42,4 @@
 
 ---
 
-<p align="center">Feito com ♥ por [Seu Nome]</p>
+<p align="center">Feito com ♥ </p>
