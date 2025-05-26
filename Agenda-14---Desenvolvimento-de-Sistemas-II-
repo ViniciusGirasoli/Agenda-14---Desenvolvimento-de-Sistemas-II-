@@ -1,32 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mini Padlet</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Tela de boas-vindas -->
-  <div id="welcome-screen">
-    <h1>Welcome to the Padlet Wall!</h1>
-    <button onclick="enterPadlet()">Enter the Wall</button>
-  </div>
+  <header>
+    <h1>Bem-vindo ao Meu Site</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <!-- Tela principal do padlet -->
-  <div id="padlet-screen" class="hidden">
-    <h2>My Collaborative Wall</h2>
-    <div id="note-form">
-      <textarea id="note-input" placeholder="Write your note..."></textarea>
-      <button onclick="addNote()">Add Note</button>
-    </div>
-    <div id="board"></div>
-  </div>
+  <main>
+    <section class="destaque">
+      <h2>Destaque</h2>
+      <p>Este é um exemplo de layout visual simples e responsivo.</p>
+      <img src="imagens/exemplo.jpg" alt="Imagem de exemplo">
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -34,150 +38,49 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #eef2f3;
-  padding: 20px;
-  text-align: center;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
   color: #333;
 }
 
-/* Telas */
-#welcome-screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
 }
 
-#padlet-screen.hidden {
-  display: none;
+nav ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Formulário */
-#note-form {
-  margin: 20px 0;
+nav ul li {
+  display: inline;
+  margin: 0 15px;
 }
 
-#note-input {
-  width: 90%;
-  max-width: 400px;
-  height: 100px;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #aaa;
-  resize: none;
-}
-
-button {
-  padding: 10px 20px;
-  margin-top: 10px;
-  font-size: 16px;
-  background-color: #5a67d8;
+nav ul li a {
   color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.3s;
+  text-decoration: none;
 }
 
-button:hover {
-  background-color: #434190;
+main {
+  padding: 20px;
+  text-align: center;
 }
 
-/* Mural */
-#board {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
+.destaque img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
   margin-top: 20px;
-}
-
-.note {
-  background: #fefcbf;
-  padding: 15px;
-  border-radius: 10px;
-  width: 200px;
-  min-height: 100px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  word-wrap: break-word;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-
-.note:hover {
-  transform: scale(1.05);
-  background: #faf089;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  #note-input {
-    width: 95%;
-  }
-}
-// Função para trocar da tela inicial para o padlet
-function enterPadlet() {
-  document.getElementById("welcome-screen").style.display = "none";
-  document.getElementById("padlet-screen").classList.remove("hidden");
-  loadNotes();
-}
-
-// Função para adicionar uma nota
-function addNote() {
-  const input = document.getElementById("note-input");
-  const text = input.value.trim();
-
-  if (text !== "") {
-    const note = {
-      id: Date.now(),
-      content: text
-    };
-    saveNote(note);
-    renderNote(note);
-    input.value = "";
-  } else {
-    alert("Please write something before adding a note.");
-  }
-}
-
-// Salva nota no localStorage
-function saveNote(note) {
-  const notes = JSON.parse(localStorage.getItem("notes") || "[]");
-  notes.push(note);
-  localStorage.setItem("notes", JSON.stringify(notes));
-}
-
-// Carrega todas as notas
-function loadNotes() {
-  const notes = JSON.parse(localStorage.getItem("notes") || "[]");
-  notes.forEach(renderNote);
-}
-
-// Renderiza uma nota no mural
-function renderNote(note) {
-  const board = document.getElementById("board");
-  const noteEl = document.createElement("div");
-  noteEl.className = "note";
-  noteEl.textContent = note.content;
-
-  // Adiciona função de clique para remover a nota
-  noteEl.onclick = () => {
-    if (confirm("Delete this note?")) {
-      noteEl.remove();
-      deleteNote(note.id);
-    }
-  };
-
-  board.appendChild(noteEl);
-}
-
-// Remove nota do localStorage
-function deleteNote(id) {
-  const notes = JSON.parse(localStorage.getItem("notes") || "[]");
-  const filtered = notes.filter(n => n.id !== id);
-  localStorage.setItem("notes", JSON.stringify(filtered));
 }
