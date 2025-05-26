@@ -17,24 +17,6 @@
 
 ---
 
-## Meus Projetos
-
-<table>
-  <tr>
-    <td>
-      <strong>Projeto 1</strong><br>
-      Uma breve descrição do projeto 1.<br>
-      <a href="https://github.com/seuusuario/projeto1">Ver repositório</a>
-    </td>
-    <td>
-      <strong>Projeto 2</strong><br>
-      Uma breve descrição do projeto 2.<br>
-      <a href="https://github.com/seuusuario/projeto2">Ver repositório</a>
-    </td>
-  </tr>
-</table>
-
----
 
 ## Contato
 
